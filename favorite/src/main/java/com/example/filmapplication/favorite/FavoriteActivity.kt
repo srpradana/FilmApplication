@@ -38,9 +38,7 @@ class FavoriteActivity : AppCompatActivity() {
                 favMoviesAdapter.notifyDataSetChanged()
             }
         })
-        with(binding.rvFavoriteMovie) {
-            layoutManager = LinearLayoutManager(context)
-            adapter = favMoviesAdapter
-        }
+        binding.rvFavoritList.layoutManager = LinearLayoutManager(this)
+        binding.rvFavoritList.adapter = favMoviesAdapter
     }
 }

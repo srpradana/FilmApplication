@@ -60,11 +60,9 @@ class DetailFilmActivity : AppCompatActivity() {
     }
 
     private fun loadingData(set: Boolean){
-        with(activityBinding){
-            pbDetail.isVisible = set
-            toolbar.isInvisible = set
-            layoutDetail.isInvisible = set
-        }
+        activityBinding.pbDetail.isVisible = set
+        activityBinding.toolbar.isInvisible = set
+        activityBinding.layoutDetail.isInvisible = set
     }
 
 
@@ -72,12 +70,10 @@ class DetailFilmActivity : AppCompatActivity() {
         Glide.with(this)
             .load("https://image.tmdb.org/t/p/w500"+movie.posterPath)
             .into(activityBinding.imgDetail)
-        with(activityBinding){
-            tvTitle.text = movie.title
-            tvDate.text = movie.date
-            tvRate.text = movie.vote.toString()
-            tvOverview.text = movie.overview
-        }
+        activityBinding.tvTitle.text = movie.title
+        activityBinding.tvDate.text = movie.date
+        activityBinding.tvRate.text = movie.vote.toString()
+        activityBinding.tvOverview.text = movie.overview
 
         loadingData(false)
     }

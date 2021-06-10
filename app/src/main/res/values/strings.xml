@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">FilmApplication</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="image_poster">image poster</string>
     <string name="title_activity_detail">Detail Film</string>
     <string name="title_film">Title</string>
@@ -9,10 +8,8 @@
     <string name="episodes_film">Average Rating</string>
     <string name="overview_film">Overview</string>
     <string name="poster_detail">Poster Detail</string>
-    <string name="desc_logo_film">Logo Film</string>
     <string name="menu_favorite">Set Favorite</string>
     <string name="menu_favorite_list">Favorite List</string>
     <string name="favorite_label">Favorite Film</string>
-    <string name="no_favorite">No Data in Favorite</string>
     <string name="title_favorite">Favorite</string>
 </resources>

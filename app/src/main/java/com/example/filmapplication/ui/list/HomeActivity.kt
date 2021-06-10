@@ -50,10 +50,8 @@ class HomeActivity : AppCompatActivity() {
                 }
             }
         })
-        with(binding.rvMovies) {
-            layoutManager = LinearLayoutManager(context)
-            adapter = moviesAdapter
-        }
+        binding.rvMovies.layoutManager = LinearLayoutManager(this)
+        binding.rvMovies.adapter = moviesAdapter
 
     }
 

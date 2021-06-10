@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue_bg"
-    android:id="@+id/detail_activity"
+    style="@style/backgroundBlue"
     tools:context=".ui.detail.DetailFilmActivity">
 
     <ProgressBar
