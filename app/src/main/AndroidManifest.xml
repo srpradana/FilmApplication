@@ -19,7 +19,7 @@
             android:theme="@style/Theme.FilmApplication.NoActionBar" />
         <activity
             android:name=".ui.splashscreen.SplashScreenActivity"
-            android:theme="@style/Theme.NoTittleBar">
+            android:theme="@style/splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
