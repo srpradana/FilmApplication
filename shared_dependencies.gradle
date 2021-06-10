@@ -1,0 +1,44 @@
+dependencies {
+    //kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:$coreKtxVer"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines_version"
+
+//koin
+    implementation "io.insert-koin:koin-core:$koinVer"
+    implementation "io.insert-koin:koin-android:$koinVer"
+
+
+//ui
+    implementation "androidx.appcompat:appcompat:$appCompatVer"
+    implementation "com.google.android.material:material:$androidMaterialVer"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
+    implementation "androidx.legacy:legacy-support-v4:$legacySuppV4"
+    implementation "androidx.cardview:cardview:$cardViewVer"
+    implementation "androidx.recyclerview:recyclerview:$recyclerViewVer"
+    implementation "androidx.recyclerview:recyclerview-selection:$recyclerViewSelectVer"
+    implementation "androidx.viewpager2:viewpager2:$viewPager2Ver"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navVer"
+    implementation "androidx.navigation:navigation-ui-ktx:$navVer"
+    implementation "com.github.bumptech.glide:glide:$glideVer"
+
+//dblocal
+    implementation "androidx.room:room-runtime:$roomRuntimeVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$liveDataVer"
+    kapt "androidx.room:room-compiler:$roomVersion"
+
+//network
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2Ver"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit2Ver"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3Ver"
+
+//test
+    testImplementation "junit:junit:$jUnitVer"
+    testImplementation "androidx.arch.core:core-testing:$androidCoreTestVersion"
+    androidTestImplementation "junit:junit:$jUnitVer"
+    androidTestImplementation "androidx.test.ext:junit:$jUnitExtVer"
+    androidTestImplementation "androidx.test:runner:$androidTestVer"
+    androidTestImplementation "androidx.test:rules:$androidTestVer"
+}

@@ -1,0 +1,71 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+}
+
+apply from: '../shared_dependencies.gradle'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    //kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:$coreKtxVer"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines_version"
+
+    //ui
+    implementation "androidx.appcompat:appcompat:$appCompatVer"
+    implementation "com.google.android.material:material:$androidMaterialVer"
+
+    //koin
+    implementation "io.insert-koin:koin-core:$koinVer"
+    implementation "io.insert-koin:koin-android:$koinVer"
+
+    //dblocal
+    implementation "androidx.room:room-runtime:$roomRuntimeVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
+    api "androidx.lifecycle:lifecycle-livedata-ktx:$liveDataVer"
+    kapt "androidx.room:room-compiler:$roomVersion"
+
+    //test
+    testImplementation "junit:junit:$jUnitVer"
+    testImplementation "androidx.arch.core:core-testing:$androidCoreTestVersion"
+    androidTestImplementation "junit:junit:$jUnitVer"
+    androidTestImplementation "androidx.test.ext:junit:$jUnitExtVer"
+    androidTestImplementation "androidx.test:runner:$androidTestVer"
+    androidTestImplementation "androidx.test:rules:$androidTestVer"
+}
