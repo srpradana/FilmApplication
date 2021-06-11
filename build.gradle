@@ -49,10 +49,14 @@ ext{
     roomVersion = '2.3.0'
     liveDataVer = '2.3.1'
     roomRuntimeVersion = '2.3.0'
+    sqliteVer = '2.1.0'
 
     //network
     retrofit2Ver = '2.9.0'
     okhttp3Ver = '5.0.0-alpha.2'
+
+    //security
+    sqlCipherVer='4.4.0'
 
     //debug
     leakCanVer = '2.4'

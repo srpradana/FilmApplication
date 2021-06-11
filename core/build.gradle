@@ -23,8 +23,12 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
-           // proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
@@ -55,9 +59,13 @@ dependencies {
     implementation "io.insert-koin:koin-core:$koinVer"
     implementation "io.insert-koin:koin-android:$koinVer"
 
+    //security
+    implementation "net.zetetic:android-database-sqlcipher:$sqlCipherVer"
+
     //dblocal
     implementation "androidx.room:room-runtime:$roomRuntimeVersion"
     implementation "androidx.room:room-ktx:$roomVersion"
+    implementation "androidx.sqlite:sqlite-ktx:$sqliteVer"
     api "androidx.lifecycle:lifecycle-livedata-ktx:$liveDataVer"
     kapt "androidx.room:room-compiler:$roomVersion"
 
